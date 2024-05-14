@@ -1,14 +1,14 @@
 ﻿namespace PREUBA_2
 {
-    partial class Form1
+    partial class Form4
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,11 +23,12 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            label2 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
             button10 = new Button();
@@ -36,13 +37,30 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            label2 = new Label();
-            button6 = new Button();
+            comboBox3 = new ComboBox();
+            label1 = new Label();
+            textBox1 = new TextBox();
             button7 = new Button();
+            comboBox1 = new ComboBox();
+            label3 = new Label();
+            panel3 = new Panel();
+            vScrollBar1 = new VScrollBar();
             panel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Font = new Font("Montserrat", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(0, 116, 204);
+            label2.Location = new Point(324, 30);
+            label2.Name = "label2";
+            label2.Size = new Size(1529, 175);
+            label2.TabIndex = 18;
+            label2.Text = "BUSCAR REPORTES";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -58,8 +76,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(320, 1021);
-            panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
+            panel1.TabIndex = 16;
             // 
             // panel2
             // 
@@ -81,21 +98,19 @@
             button10.TabIndex = 6;
             button10.Text = "REGISTRO";
             button10.UseVisualStyleBackColor = false;
-            button10.Click += button10_Click;
             // 
             // button9
             // 
-            button9.BackColor = Color.FromArgb(0, 116, 204);
+            button9.BackColor = Color.White;
             button9.FlatStyle = FlatStyle.Flat;
             button9.Font = new Font("Montserrat", 10.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button9.ForeColor = Color.White;
+            button9.ForeColor = Color.FromArgb(0, 116, 204);
             button9.Location = new Point(0, 504);
             button9.Name = "button9";
             button9.Size = new Size(320, 72);
             button9.TabIndex = 5;
             button9.Text = "ARCHIVO";
             button9.UseVisualStyleBackColor = false;
-            button9.Click += button9_Click;
             // 
             // button8
             // 
@@ -112,10 +127,10 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.White;
+            button1.BackColor = Color.FromArgb(0, 116, 204);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Montserrat", 10.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(0, 116, 204);
+            button1.ForeColor = Color.White;
             button1.Location = new Point(0, 432);
             button1.Name = "button1";
             button1.Size = new Size(321, 72);
@@ -150,76 +165,40 @@
             button3.Text = "REGISTRO DE ESPERA";
             button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // comboBox3
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            button4.BackColor = Color.FromArgb(0, 116, 204);
-            button4.FlatAppearance.BorderColor = Color.White;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseDownBackColor = Color.White;
-            button4.FlatAppearance.MouseOverBackColor = Color.White;
-            button4.Font = new Font("Montserrat", 47.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(339, 265);
-            button4.Margin = new Padding(0);
-            button4.Name = "button4";
-            button4.Size = new Size(728, 504);
-            button4.TabIndex = 4;
-            button4.Text = "CONTINUAR REPORTE DE RESULTADOS";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            comboBox3.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox3.ForeColor = Color.FromArgb(0, 116, 204);
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(341, 347);
+            comboBox3.Name = "comboBox3";
+            comboBox3.RightToLeft = RightToLeft.No;
+            comboBox3.Size = new Size(338, 66);
+            comboBox3.TabIndex = 33;
+            comboBox3.Text = "ETIQUETA";
             // 
-            // button5
+            // label1
             // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            button5.BackColor = Color.FromArgb(0, 116, 204);
-            button5.FlatAppearance.BorderColor = Color.White;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.White;
-            button5.FlatAppearance.MouseOverBackColor = Color.White;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Font = new Font("Montserrat", 47.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(1143, 265);
-            button5.Margin = new Padding(0);
-            button5.Name = "button5";
-            button5.Size = new Size(728, 504);
-            button5.TabIndex = 5;
-            button5.Text = "NUEVO REPORTE DE RESULTADOS";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            label1.AutoSize = true;
+            label1.Font = new Font("Montserrat", 21.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(0, 116, 204);
+            label1.Location = new Point(324, 293);
+            label1.Name = "label1";
+            label1.Size = new Size(334, 54);
+            label1.TabIndex = 32;
+            label1.Text = "FILTRAR POR:";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // textBox1
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Font = new Font("Montserrat", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(0, 116, 204);
-            label2.Location = new Point(324, 30);
-            label2.Name = "label2";
-            label2.Size = new Size(1270, 175);
-            label2.TabIndex = 15;
-            label2.Text = "SUBIR REPORTE";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
-            // 
-            // button6
-            // 
-            button6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            button6.BackColor = Color.FromArgb(0, 116, 204);
-            button6.FlatAppearance.BorderColor = Color.White;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatAppearance.MouseDownBackColor = Color.White;
-            button6.FlatAppearance.MouseOverBackColor = Color.White;
-            button6.Font = new Font("Montserrat", 47.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(321, 911);
-            button6.Margin = new Padding(0);
-            button6.Name = "button6";
-            button6.Size = new Size(0, 0);
-            button6.TabIndex = 17;
-            button6.Text = "Historial";
-            button6.UseVisualStyleBackColor = false;
+            textBox1.BackColor = SystemColors.Window;
+            textBox1.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = Color.FromArgb(0, 116, 204);
+            textBox1.Location = new Point(338, 206);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(1026, 66);
+            textBox1.TabIndex = 34;
+            textBox1.Text = "NOMBRE/ID DEL PACIENTE";
             // 
             // button7
             // 
@@ -229,51 +208,97 @@
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatAppearance.MouseDownBackColor = Color.White;
             button7.FlatAppearance.MouseOverBackColor = Color.White;
-            button7.Font = new Font("Montserrat", 47.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button7.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button7.ForeColor = Color.White;
-            button7.Location = new Point(843, 829);
+            button7.Location = new Point(852, 434);
             button7.Margin = new Padding(0);
             button7.Name = "button7";
-            button7.Size = new Size(522, 122);
-            button7.TabIndex = 18;
-            button7.Text = "ARCHIVO";
+            button7.Size = new Size(246, 81);
+            button7.TabIndex = 35;
+            button7.Text = "BUSCAR";
             button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
             // 
-            // Form1
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.ForeColor = Color.FromArgb(0, 116, 204);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "MÁS RECIENTE", "MÁS ANTIGUO", "ALFABETICAMENTE (A-Z)", "ALFABETICAMENTE (Z-A)" });
+            comboBox1.Location = new Point(783, 347);
+            comboBox1.Name = "comboBox1";
+            comboBox1.RightToLeft = RightToLeft.No;
+            comboBox1.Size = new Size(581, 66);
+            comboBox1.TabIndex = 37;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Montserrat", 21.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(0, 116, 204);
+            label3.Location = new Point(772, 293);
+            label3.Name = "label3";
+            label3.Size = new Size(381, 54);
+            label3.TabIndex = 36;
+            label3.Text = "ORDENAR POR:";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(0, 116, 204);
+            panel3.Controls.Add(vScrollBar1);
+            panel3.ForeColor = Color.FromArgb(0, 116, 204);
+            panel3.Location = new Point(341, 524);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1536, 497);
+            panel3.TabIndex = 38;
+            // 
+            // vScrollBar1
+            // 
+            vScrollBar1.Location = new Point(1497, 0);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(39, 497);
+            vScrollBar1.TabIndex = 0;
+            // 
+            // Form4
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
             ClientSize = new Size(1898, 1024);
+            Controls.Add(panel3);
+            Controls.Add(comboBox1);
+            Controls.Add(label3);
             Controls.Add(button7);
-            Controls.Add(button6);
+            Controls.Add(textBox1);
+            Controls.Add(comboBox3);
+            Controls.Add(label1);
             Controls.Add(label2);
-            Controls.Add(button5);
-            Controls.Add(button4);
             Controls.Add(panel1);
-            ForeColor = SystemColors.ActiveCaption;
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
+            Name = "Form4";
+            Text = "Form4";
             panel1.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
+
+        private Label label2;
         private Panel panel1;
+        private Panel panel2;
+        private Button button10;
+        private Button button9;
+        private Button button8;
         private Button button1;
         private Button button2;
         private Button button3;
-        private Button button4;
-        private Button button5;
-        private Label label2;
-        private Button button6;
+        private ComboBox comboBox3;
+        private Label label1;
+        private TextBox textBox1;
         private Button button7;
-        private Button button9;
-        private Button button8;
-        private Button button10;
-        private Panel panel2;
+        private ComboBox comboBox1;
+        private Label label3;
+        private Panel panel3;
+        private VScrollBar vScrollBar1;
     }
 }

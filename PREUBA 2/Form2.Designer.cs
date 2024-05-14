@@ -43,41 +43,45 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
+            label1 = new Label();
+            comboBox3 = new ComboBox();
+            button9 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Montserrat", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(0, 116, 204);
-            label3.Location = new Point(335, 304);
+            label3.Location = new Point(329, 304);
             label3.Name = "label3";
-            label3.Size = new Size(320, 34);
+            label3.Size = new Size(595, 68);
             label3.TabIndex = 17;
-            label3.Text = "Nombre del reporte...";
+            label3.Text = "Nombre del reporte";
             // 
             // button4
             // 
             button4.BackColor = Color.FromArgb(0, 116, 204);
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Montserrat", 10.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(587, 585);
+            button4.Location = new Point(832, 867);
             button4.Name = "button4";
-            button4.Size = new Size(253, 48);
+            button4.Size = new Size(514, 76);
             button4.TabIndex = 16;
             button4.Text = "SUBIR ARCHIVO";
             button4.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("Montserrat", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.FromArgb(0, 116, 204);
-            textBox1.Location = new Point(341, 341);
+            textBox1.Location = new Point(341, 373);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(632, 42);
+            textBox1.Size = new Size(909, 71);
             textBox1.TabIndex = 15;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label2
             // 
@@ -92,25 +96,26 @@
             // 
             // comboBox2
             // 
-            comboBox2.Font = new Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox2.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox2.ForeColor = Color.FromArgb(0, 116, 204);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(340, 486);
+            comboBox2.Location = new Point(340, 595);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(718, 37);
+            comboBox2.Size = new Size(995, 71);
             comboBox2.TabIndex = 13;
             comboBox2.Text = "Estudio Anterior";
             // 
             // comboBox1
             // 
-            comboBox1.Font = new Font("Montserrat", 11.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.ForeColor = Color.FromArgb(0, 116, 204);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(340, 413);
+            comboBox1.Location = new Point(340, 484);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(718, 37);
+            comboBox1.Size = new Size(995, 71);
             comboBox1.TabIndex = 12;
-            comboBox1.Text = "Nombre del paciente";
+            comboBox1.Text = "Nombre/ID del paciente";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -183,6 +188,7 @@
             button5.TabIndex = 18;
             button5.Text = "ARCHIVO";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -223,11 +229,50 @@
             button8.Text = "CONTINUAR REPORTE";
             button8.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(0, 116, 204);
+            label1.Location = new Point(327, 671);
+            label1.Name = "label1";
+            label1.Size = new Size(297, 68);
+            label1.TabIndex = 22;
+            label1.Text = "Etiquetas";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // comboBox3
+            // 
+            comboBox3.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox3.ForeColor = Color.FromArgb(0, 116, 204);
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(341, 742);
+            comboBox3.Name = "comboBox3";
+            comboBox3.RightToLeft = RightToLeft.No;
+            comboBox3.Size = new Size(338, 71);
+            comboBox3.TabIndex = 23;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.FromArgb(0, 116, 204);
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button9.ForeColor = Color.White;
+            button9.Location = new Point(1383, 304);
+            button9.Name = "button9";
+            button9.Size = new Size(476, 430);
+            button9.TabIndex = 33;
+            button9.Text = "AGREGAR FOTOGRAFÍAS";
+            button9.UseVisualStyleBackColor = false;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1898, 1024);
+            Controls.Add(button9);
+            Controls.Add(comboBox3);
+            Controls.Add(label1);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
@@ -265,5 +310,8 @@
         private Button button6;
         private Button button7;
         private Button button8;
+        private Label label1;
+        private ComboBox comboBox3;
+        private Button button9;
     }
 }
