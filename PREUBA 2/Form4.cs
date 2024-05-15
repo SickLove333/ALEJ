@@ -29,5 +29,10 @@ namespace PREUBA_2
             Form1 form1 = new Form1();
             form1.Show();
         }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            //SqlConnection con = 0
+        }
     }
 }

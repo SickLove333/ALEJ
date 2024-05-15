@@ -37,16 +37,16 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            comboBox3 = new ComboBox();
-            label1 = new Label();
             textBox1 = new TextBox();
             button7 = new Button();
-            comboBox1 = new ComboBox();
-            label3 = new Label();
             panel3 = new Panel();
             vScrollBar1 = new VScrollBar();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -165,52 +165,29 @@
             button3.Text = "REGISTRO DE ESPERA";
             button3.UseVisualStyleBackColor = false;
             // 
-            // comboBox3
-            // 
-            comboBox3.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox3.ForeColor = Color.FromArgb(0, 116, 204);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(341, 347);
-            comboBox3.Name = "comboBox3";
-            comboBox3.RightToLeft = RightToLeft.No;
-            comboBox3.Size = new Size(338, 66);
-            comboBox3.TabIndex = 33;
-            comboBox3.Text = "ETIQUETA";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Montserrat", 21.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(0, 116, 204);
-            label1.Location = new Point(324, 293);
-            label1.Name = "label1";
-            label1.Size = new Size(334, 54);
-            label1.TabIndex = 32;
-            label1.Text = "FILTRAR POR:";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // textBox1
             // 
             textBox1.BackColor = SystemColors.Window;
             textBox1.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.FromArgb(0, 116, 204);
-            textBox1.Location = new Point(338, 206);
+            textBox1.Location = new Point(341, 305);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(1026, 66);
+            textBox1.Size = new Size(1512, 66);
             textBox1.TabIndex = 34;
-            textBox1.Text = "NOMBRE/ID DEL PACIENTE";
+            textBox1.Text = "NOMBRE";
+            textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // button7
             // 
             button7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            button7.BackColor = Color.FromArgb(0, 116, 204);
+            button7.BackColor = Color.White;
             button7.FlatAppearance.BorderColor = Color.White;
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatAppearance.MouseDownBackColor = Color.White;
             button7.FlatAppearance.MouseOverBackColor = Color.White;
             button7.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(852, 434);
+            button7.ForeColor = Color.FromArgb(0, 116, 204);
+            button7.Location = new Point(1582, 206);
             button7.Margin = new Padding(0);
             button7.Name = "button7";
             button7.Size = new Size(246, 81);
@@ -218,38 +195,15 @@
             button7.Text = "BUSCAR";
             button7.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.ForeColor = Color.FromArgb(0, 116, 204);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "MÁS RECIENTE", "MÁS ANTIGUO", "ALFABETICAMENTE (A-Z)", "ALFABETICAMENTE (Z-A)" });
-            comboBox1.Location = new Point(783, 347);
-            comboBox1.Name = "comboBox1";
-            comboBox1.RightToLeft = RightToLeft.No;
-            comboBox1.Size = new Size(581, 66);
-            comboBox1.TabIndex = 37;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Montserrat", 21.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(0, 116, 204);
-            label3.Location = new Point(772, 293);
-            label3.Name = "label3";
-            label3.Size = new Size(381, 54);
-            label3.TabIndex = 36;
-            label3.Text = "ORDENAR POR:";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(0, 116, 204);
+            panel3.Controls.Add(dataGridView1);
             panel3.Controls.Add(vScrollBar1);
             panel3.ForeColor = Color.FromArgb(0, 116, 204);
-            panel3.Location = new Point(341, 524);
+            panel3.Location = new Point(341, 398);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1536, 497);
+            panel3.Size = new Size(1536, 623);
             panel3.TabIndex = 38;
             // 
             // vScrollBar1
@@ -259,24 +213,55 @@
             vScrollBar1.Size = new Size(39, 497);
             vScrollBar1.TabIndex = 0;
             // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Nombre de Paciente", "ID del Paciente", "Nombre de Reporte" });
+            comboBox1.Location = new Point(685, 206);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(643, 66);
+            comboBox1.TabIndex = 39;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Montserrat", 23.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(0, 116, 204);
+            label1.Location = new Point(332, 206);
+            label1.Name = "label1";
+            label1.Size = new Size(353, 58);
+            label1.TabIndex = 40;
+            label1.Text = "BUSCAR POR";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(14, 100);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(1473, 523);
+            dataGridView1.TabIndex = 36;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1898, 1024);
-            Controls.Add(panel3);
-            Controls.Add(comboBox1);
-            Controls.Add(label3);
-            Controls.Add(button7);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox3);
             Controls.Add(label1);
+            Controls.Add(comboBox1);
+            Controls.Add(button7);
+            Controls.Add(panel3);
+            Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(panel1);
             Name = "Form4";
             Text = "Form4";
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -292,13 +277,12 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private ComboBox comboBox3;
-        private Label label1;
         private TextBox textBox1;
         private Button button7;
-        private ComboBox comboBox1;
-        private Label label3;
         private Panel panel3;
         private VScrollBar vScrollBar1;
+        private ComboBox comboBox1;
+        private Label label1;
+        private DataGridView dataGridView1;
     }
 }
