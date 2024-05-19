@@ -37,14 +37,18 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
-            comboBox3 = new ComboBox();
-            label1 = new Label();
             label3 = new Label();
             button4 = new Button();
-            textBox1 = new TextBox();
+            txtName = new TextBox();
             label2 = new Label();
             comboBox1 = new ComboBox();
             button9 = new Button();
+            txtFile2 = new TextBox();
+            label1 = new Label();
+            txtFile = new TextBox();
+            button10 = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            openFileDialog2 = new OpenFileDialog();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -160,29 +164,6 @@
             button8.Text = "REGISTRO";
             button8.UseVisualStyleBackColor = false;
             // 
-            // comboBox3
-            // 
-            comboBox3.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox3.ForeColor = Color.FromArgb(0, 116, 204);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(341, 666);
-            comboBox3.Name = "comboBox3";
-            comboBox3.RightToLeft = RightToLeft.No;
-            comboBox3.Size = new Size(338, 71);
-            comboBox3.TabIndex = 31;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(0, 116, 204);
-            label1.Location = new Point(327, 595);
-            label1.Name = "label1";
-            label1.Size = new Size(297, 68);
-            label1.TabIndex = 30;
-            label1.Text = "Etiquetas";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -207,15 +188,15 @@
             button4.Text = "SUBIR ARCHIVO";
             button4.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.FromArgb(0, 116, 204);
-            textBox1.Location = new Point(341, 373);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(994, 71);
-            textBox1.TabIndex = 27;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtName.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtName.ForeColor = Color.FromArgb(0, 116, 204);
+            txtName.Location = new Point(341, 373);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(994, 71);
+            txtName.TabIndex = 27;
+            txtName.TextChanged += textBox1_TextChanged;
             // 
             // label2
             // 
@@ -233,7 +214,7 @@
             comboBox1.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.ForeColor = Color.FromArgb(0, 116, 204);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(340, 484);
+            comboBox1.Location = new Point(340, 523);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(995, 71);
             comboBox1.TabIndex = 24;
@@ -251,18 +232,63 @@
             button9.TabIndex = 32;
             button9.Text = "AGREGAR FOTOGRAFÍAS";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
+            // 
+            // txtFile2
+            // 
+            txtFile2.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFile2.ForeColor = Color.FromArgb(0, 116, 204);
+            txtFile2.Location = new Point(341, 841);
+            txtFile2.Name = "txtFile2";
+            txtFile2.ReadOnly = true;
+            txtFile2.Size = new Size(185, 71);
+            txtFile2.TabIndex = 40;
+            txtFile2.Visible = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(0, 116, 204);
+            label1.Location = new Point(340, 693);
+            label1.Name = "label1";
+            label1.Size = new Size(485, 68);
+            label1.TabIndex = 39;
+            label1.Text = "Ruta del archivo";
+            // 
+            // txtFile
+            // 
+            txtFile.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFile.ForeColor = Color.FromArgb(0, 116, 204);
+            txtFile.Location = new Point(341, 764);
+            txtFile.Name = "txtFile";
+            txtFile.ReadOnly = true;
+            txtFile.Size = new Size(1255, 71);
+            txtFile.TabIndex = 38;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(1602, 764);
+            button10.Name = "button10";
+            button10.Size = new Size(112, 71);
+            button10.TabIndex = 41;
+            button10.Text = "...";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1898, 1024);
-            Controls.Add(button9);
-            Controls.Add(comboBox3);
+            Controls.Add(button10);
+            Controls.Add(txtFile2);
             Controls.Add(label1);
+            Controls.Add(txtFile);
+            Controls.Add(button9);
             Controls.Add(label3);
             Controls.Add(button4);
-            Controls.Add(textBox1);
+            Controls.Add(txtName);
             Controls.Add(label2);
             Controls.Add(comboBox1);
             Controls.Add(button8);
@@ -288,13 +314,17 @@
         private Button button6;
         private Button button7;
         private Button button8;
-        private ComboBox comboBox3;
-        private Label label1;
         private Label label3;
         private Button button4;
-        private TextBox textBox1;
+        private TextBox txtName;
         private Label label2;
         private ComboBox comboBox1;
         private Button button9;
+        private TextBox txtFile2;
+        private Label label1;
+        private TextBox txtFile;
+        private Button button10;
+        private OpenFileDialog openFileDialog1;
+        private OpenFileDialog openFileDialog2;
     }
 }

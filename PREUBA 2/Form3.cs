@@ -16,34 +16,34 @@ namespace PREUBA_2
         {
             InitializeComponent();
             // Configuración inicial del TextBox
-            textBox1.Text = "Nombre del Reporte";
-            textBox1.ForeColor = SystemColors.GrayText; // Color de texto gris
+            txtName.Text = "Nombre del Reporte";
+            txtName.ForeColor = SystemColors.GrayText; // Color de texto gris
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Nombre del Reporte")
+            if (txtName.Text == "Nombre del Reporte")
             {
-                textBox1.Text = ""; // Borra el texto predeterminado al escribir
-                textBox1.ForeColor = SystemColors.WindowText; // Restaura el color de texto predeterminado
+                txtName.Text = ""; // Borra el texto predeterminado al escribir
+                txtName.ForeColor = SystemColors.WindowText; // Restaura el color de texto predeterminado
             }
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Nombre del Reporte")
+            if (txtName.Text == "Nombre del Reporte")
             {
-                textBox1.Text = ""; // Borra el texto predeterminado al hacer clic
-                textBox1.ForeColor = SystemColors.WindowText; // Restaura el color de texto predeterminado
+                txtName.Text = ""; // Borra el texto predeterminado al hacer clic
+                txtName.ForeColor = SystemColors.WindowText; // Restaura el color de texto predeterminado
             }
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                textBox1.Text = "Nombre del Reporte";
-                textBox1.ForeColor = SystemColors.GrayText; // Cambia el color del texto a gris
+                txtName.Text = "Nombre del Reporte";
+                txtName.ForeColor = SystemColors.GrayText; // Cambia el color del texto a gris
             }
         }
 
@@ -72,6 +72,32 @@ namespace PREUBA_2
             Form4 form4 = new Form4();
             form4.Show();
             this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = "c:\\";
+            openFileDialog1.FileName = "Todos los archivos (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                txtFile.Text = openFileDialog1.FileName;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            openFileDialog2.InitialDirectory = "c:\\";
+            openFileDialog2.FileName = "Todos los archivos (*.*)|*.*";
+            openFileDialog2.FilterIndex = 1;
+            openFileDialog2.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                txtFile2.Text = openFileDialog1.FileName;
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PREUBA_2
 {
@@ -32,7 +33,17 @@ namespace PREUBA_2
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-            //SqlConnection con = 0
+            //SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion);
+            //String query = "select * from **???** where " + comboBox1.Text + " like'%"+textBox1.Text +"%'";
+            //SqlDataAdapter ada = new SqlDataAdapter(query, con);
+
+            //con.Open();
+
+            //DataSet data = new DataSet();
+            //ada.Fill(data, "***???***");
+
+            //dataGridView1.DataSource = data;
+            //dataGridView1.DataMember = "***???***";
         }
     }
 }

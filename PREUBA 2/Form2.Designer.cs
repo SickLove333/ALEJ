@@ -30,10 +30,9 @@
         {
             label3 = new Label();
             button4 = new Button();
-            textBox1 = new TextBox();
+            txtName = new TextBox();
             label2 = new Label();
             comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
             panel1 = new Panel();
             panel2 = new Panel();
             button2 = new Button();
@@ -43,9 +42,16 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
-            label1 = new Label();
-            comboBox3 = new ComboBox();
             button9 = new Button();
+            label1 = new Label();
+            txtFile = new TextBox();
+            button10 = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            openFileDialog2 = new OpenFileDialog();
+            txtFile2 = new TextBox();
+            comboBox1 = new ComboBox();
+            button11 = new Button();
+            button12 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,22 +72,23 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(832, 867);
+            button4.Location = new Point(832, 871);
             button4.Name = "button4";
             button4.Size = new Size(514, 76);
             button4.TabIndex = 16;
             button4.Text = "SUBIR ARCHIVO";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click_1;
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.FromArgb(0, 116, 204);
-            textBox1.Location = new Point(341, 373);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(909, 71);
-            textBox1.TabIndex = 15;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtName.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtName.ForeColor = Color.FromArgb(0, 116, 204);
+            txtName.Location = new Point(341, 373);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(994, 71);
+            txtName.TabIndex = 15;
+            txtName.TextChanged += textBox1_TextChanged;
             // 
             // label2
             // 
@@ -104,18 +111,6 @@
             comboBox2.Size = new Size(995, 71);
             comboBox2.TabIndex = 13;
             comboBox2.Text = "Estudio Anterior";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.ForeColor = Color.FromArgb(0, 116, 204);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(340, 484);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(995, 71);
-            comboBox1.TabIndex = 12;
-            comboBox1.Text = "Nombre/ID del paciente";
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -229,50 +224,100 @@
             button8.Text = "CONTINUAR REPORTE";
             button8.UseVisualStyleBackColor = false;
             // 
+            // button9
+            // 
+            button9.Location = new Point(0, 0);
+            button9.Name = "button9";
+            button9.Size = new Size(75, 23);
+            button9.TabIndex = 39;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(0, 116, 204);
-            label1.Location = new Point(327, 671);
+            label1.Location = new Point(329, 695);
             label1.Name = "label1";
-            label1.Size = new Size(297, 68);
-            label1.TabIndex = 22;
-            label1.Text = "Etiquetas";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            label1.Size = new Size(485, 68);
+            label1.TabIndex = 35;
+            label1.Text = "Ruta del archivo";
             // 
-            // comboBox3
+            // txtFile
             // 
-            comboBox3.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox3.ForeColor = Color.FromArgb(0, 116, 204);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(341, 742);
-            comboBox3.Name = "comboBox3";
-            comboBox3.RightToLeft = RightToLeft.No;
-            comboBox3.Size = new Size(338, 71);
-            comboBox3.TabIndex = 23;
+            txtFile.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFile.ForeColor = Color.FromArgb(0, 116, 204);
+            txtFile.Location = new Point(341, 764);
+            txtFile.Name = "txtFile";
+            txtFile.ReadOnly = true;
+            txtFile.Size = new Size(1255, 71);
+            txtFile.TabIndex = 34;
             // 
-            // button9
+            // button10
             // 
-            button9.BackColor = Color.FromArgb(0, 116, 204);
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button9.ForeColor = Color.White;
-            button9.Location = new Point(1383, 304);
-            button9.Name = "button9";
-            button9.Size = new Size(476, 430);
-            button9.TabIndex = 33;
-            button9.Text = "AGREGAR FOTOGRAFÍAS";
-            button9.UseVisualStyleBackColor = false;
+            button10.Location = new Point(0, 0);
+            button10.Name = "button10";
+            button10.Size = new Size(75, 23);
+            button10.TabIndex = 38;
+            // 
+            // txtFile2
+            // 
+            txtFile2.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFile2.ForeColor = Color.FromArgb(0, 116, 204);
+            txtFile2.Location = new Point(340, 841);
+            txtFile2.Name = "txtFile2";
+            txtFile2.ReadOnly = true;
+            txtFile2.Size = new Size(185, 71);
+            txtFile2.TabIndex = 37;
+            txtFile2.Visible = false;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Montserrat", 25.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.ForeColor = Color.FromArgb(0, 116, 204);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(340, 484);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(995, 71);
+            comboBox1.TabIndex = 12;
+            comboBox1.Text = "Nombre/ID del paciente";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // button11
+            // 
+            button11.Location = new Point(1602, 764);
+            button11.Name = "button11";
+            button11.Size = new Size(112, 71);
+            button11.TabIndex = 42;
+            button11.Text = "...";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click_1;
+            // 
+            // button12
+            // 
+            button12.BackColor = Color.FromArgb(0, 116, 204);
+            button12.FlatStyle = FlatStyle.Flat;
+            button12.Font = new Font("Montserrat", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button12.ForeColor = Color.White;
+            button12.Location = new Point(1383, 304);
+            button12.Name = "button12";
+            button12.Size = new Size(476, 430);
+            button12.TabIndex = 43;
+            button12.Text = "AGREGAR FOTOGRAFÍAS";
+            button12.UseVisualStyleBackColor = false;
+            button12.Click += button12_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1898, 1024);
-            Controls.Add(button9);
-            Controls.Add(comboBox3);
+            Controls.Add(button12);
+            Controls.Add(button11);
+            Controls.Add(txtFile2);
+            Controls.Add(button10);
             Controls.Add(label1);
+            Controls.Add(txtFile);
+            Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
@@ -280,7 +325,7 @@
             Controls.Add(label3);
             Controls.Add(button1);
             Controls.Add(button4);
-            Controls.Add(textBox1);
+            Controls.Add(txtName);
             Controls.Add(label2);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
@@ -297,10 +342,9 @@
 
         private Label label3;
         private Button button4;
-        private TextBox textBox1;
+        private TextBox txtName;
         private Label label2;
         private ComboBox comboBox2;
-        private ComboBox comboBox1;
         private Panel panel1;
         private Button button1;
         private Button button2;
@@ -310,8 +354,15 @@
         private Button button6;
         private Button button7;
         private Button button8;
-        private Label label1;
-        private ComboBox comboBox3;
         private Button button9;
+        private Label label1;
+        private TextBox txtFile;
+        private Button button10;
+        private OpenFileDialog openFileDialog1;
+        private OpenFileDialog openFileDialog2;
+        private TextBox txtFile2;
+        private ComboBox comboBox1;
+        private Button button11;
+        private Button button12;
     }
 }
